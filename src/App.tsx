@@ -44,7 +44,7 @@ function App() {
         </div>
       </div>
       <div className="reset">
-        <button onClick={resetScores}>reset</button>
+        <button onClick={resetScores}>resett</button>
       </div>
     </>
   );
