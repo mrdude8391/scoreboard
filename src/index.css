@@ -122,17 +122,19 @@ p {
   .red {
     button:first-child {
       background-color: #dc2626;
+      background-color: #ef4444;
     }
     button {
-      background-color: #ef4444;
+      background-color: #f87171;
     }
   }
   .blue {
     button:first-child {
       background-color: #2563eb;
+      background-color: #2b7fff;
     }
     button {
-      background-color: #2b7fff;
+      background-color: #60a5fa;
     }
   }
 }
