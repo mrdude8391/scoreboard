@@ -48,7 +48,7 @@ function App() {
         <FullscreenButton></FullscreenButton>
       </div>
       <div className="reset">
-        <button onClick={resetScores}>resett</button>
+        <button onClick={resetScores}>reset</button>
       </div>
     </>
   );
