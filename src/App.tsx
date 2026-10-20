@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./index.css";
+import FullscreenButton from "./components/FullscreenButton";
 
 function App() {
   const [redScore, setRedScore] = useState(0);
@@ -42,6 +43,9 @@ function App() {
             onClick={() => decreaseScore(blueScore, setBlueScore)}
           ></button>
         </div>
+      </div>
+      <div>
+        <FullscreenButton></FullscreenButton>
       </div>
       <div className="reset">
         <button onClick={resetScores}>resett</button>
