@@ -66,6 +66,18 @@ body {
   margin: 0;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 0;
+  button {
+    height: 100px;
+    width: 25vw;
+    font-size: larger;
+  }
+}
+
 h1,
 h2 {
   font-family: var(--heading);
@@ -136,14 +148,5 @@ p {
     button {
       background-color: #60a5fa;
     }
-  }
-}
-
-.reset {
-  display: flex;
-  height: 100px;
-  justify-content: center;
-  button {
-    width: 25vw;
   }
 }

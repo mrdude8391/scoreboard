@@ -22,10 +22,7 @@ export default function FullscreenButton() {
   };
 
   return (
-    <button
-      onClick={toggleFullScreen}
-      style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}
-    >
+    <button onClick={toggleFullScreen}>
       {isFullscreen ? "Exit Full Screen" : "Go Full Screen"}
     </button>
   );

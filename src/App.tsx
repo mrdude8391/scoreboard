@@ -28,28 +28,30 @@ function App() {
 
   return (
     <>
-      <div className="scoreboard">
-        <div className="red score">
-          <button onClick={() => increaseScore(redScore, setRedScore)}>
-            {redScore}
-          </button>
-          <button onClick={() => decreaseScore(redScore, setRedScore)}></button>
+      <main>
+        <div className="scoreboard">
+          <div className="red score">
+            <button onClick={() => increaseScore(redScore, setRedScore)}>
+              {redScore}
+            </button>
+            <button
+              onClick={() => decreaseScore(redScore, setRedScore)}
+            ></button>
+          </div>
+          <div className="blue score">
+            <button onClick={() => increaseScore(blueScore, setBlueScore)}>
+              {blueScore}
+            </button>
+            <button
+              onClick={() => decreaseScore(blueScore, setBlueScore)}
+            ></button>
+          </div>
         </div>
-        <div className="blue score">
-          <button onClick={() => increaseScore(blueScore, setBlueScore)}>
-            {blueScore}
-          </button>
-          <button
-            onClick={() => decreaseScore(blueScore, setBlueScore)}
-          ></button>
-        </div>
-      </div>
-      <div>
+      </main>
+      <footer>
         <FullscreenButton></FullscreenButton>
-      </div>
-      <div className="reset">
-        <button onClick={resetScores}>reset</button>
-      </div>
+        <button onClick={resetScores}>Reset</button>
+      </footer>
     </>
   );
 }
