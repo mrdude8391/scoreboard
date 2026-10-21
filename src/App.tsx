@@ -29,9 +29,12 @@ function App() {
   };
 
   const handleSwap = () => {
-    const swap = redScore;
+    const swapScore = redScore;
+    const swapName = redName;
     setRedScore(blueScore);
-    setBlueScore(swap);
+    setBlueScore(swapScore);
+    setRedName(blueName);
+    setBlueName(swapName);
   };
 
   return (
