@@ -26,6 +26,12 @@ function App() {
     setBlueScore(0);
   };
 
+  const handleSwap = () => {
+    const swap = redScore;
+    setRedScore(blueScore);
+    setBlueScore(swap);
+  };
+
   return (
     <>
       <main>
@@ -50,6 +56,7 @@ function App() {
       </main>
       <footer>
         <FullscreenButton></FullscreenButton>
+        <button onClick={handleSwap}>Swap</button>
         <button onClick={resetScores}>Reset</button>
       </footer>
     </>
