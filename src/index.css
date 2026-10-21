@@ -68,13 +68,27 @@ body {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 4px;
   padding: 4px 0;
-  button {
-    height: 100px;
-    width: 25vw;
-    font-size: larger;
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    button {
+      height: 100px;
+      width: 25vw;
+      font-size: larger;
+    }
+  }
+  .teams {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4px;
+    input {
+      height: 32px;
+    }
   }
 }
 
@@ -122,6 +136,17 @@ p {
       font-size: 150px;
       border: none;
       color: white;
+      p {
+        position: relative;
+        label {
+          position: absolute;
+          left: 0;
+          bottom: 100%;
+          width: 100%;
+          font-size: 32px;
+          overflow-wrap: break-word;
+        }
+      }
     }
     button:first-child {
       flex: 12 0 0;

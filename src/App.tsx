@@ -5,6 +5,8 @@ import FullscreenButton from "./components/FullscreenButton";
 function App() {
   const [redScore, setRedScore] = useState(0);
   const [blueScore, setBlueScore] = useState(0);
+  const [redName, setRedName] = useState("");
+  const [blueName, setBlueName] = useState("");
 
   const increaseScore = (
     score: number,
@@ -38,26 +40,50 @@ function App() {
         <div className="scoreboard">
           <div className="red score">
             <button onClick={() => increaseScore(redScore, setRedScore)}>
-              {redScore}
+              <p>
+                {redScore}
+                <label>{redName}</label>
+              </p>
             </button>
             <button
+              className="minus"
               onClick={() => decreaseScore(redScore, setRedScore)}
             ></button>
           </div>
           <div className="blue score">
             <button onClick={() => increaseScore(blueScore, setBlueScore)}>
-              {blueScore}
+              <p>
+                {blueScore}
+                <label>{blueName}</label>
+              </p>
             </button>
             <button
+              className="minus"
               onClick={() => decreaseScore(blueScore, setBlueScore)}
             ></button>
           </div>
         </div>
       </main>
       <footer>
-        <FullscreenButton></FullscreenButton>
-        <button onClick={handleSwap}>Swap</button>
-        <button onClick={resetScores}>Reset</button>
+        <div className="controls">
+          <FullscreenButton></FullscreenButton>
+          <button onClick={handleSwap}>Swap</button>
+          <button onClick={resetScores}>Reset</button>
+        </div>
+        <div className="teams">
+          <input
+            placeholder="Red Team Name:"
+            onChange={(e) => {
+              setRedName(e.target.value);
+            }}
+          ></input>
+          <input
+            placeholder="Blue Team Name:"
+            onChange={(e) => {
+              setBlueName(e.target.value);
+            }}
+          ></input>
+        </div>
       </footer>
     </>
   );
